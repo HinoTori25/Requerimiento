@@ -15,7 +15,7 @@
 
 	<!-- Paquete Base para escanear anotaciones Spring -->
 	<context:component-scan
-		base-package="com.unmsm.software.presentacion, com.unmsm.software.negocio" />
+		base-package="com.unmsm.software" />
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<bean id="propertyConfigurer"
@@ -43,7 +43,13 @@
 	</bean>
 	
 	<!-- Configuracion de mybatis -->
-	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+  		<property name="dataSource" ref="dataSource" />
+ 		<property name="typeAliasesPackage" value="com.unmsm.software.persistence" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.unmsm.software.persistence" />
+	</bean>		
 	<!-- /Configuracion de mybatis -->
 	
 

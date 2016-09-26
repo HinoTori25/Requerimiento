@@ -27,20 +27,20 @@
 <!-- 		<filter-name>PrimeFaces FileUpload Filter</filter-name> -->
 <!-- 		<filter-class>org.primefaces.webapp.filter.FileUploadFilter</filter-class> -->
 <!-- 	</filter> -->
-	<filter-mapping>
+<!-- 	<filter-mapping>
 		<filter-name>PrimeFaces FileUpload Filter</filter-name>
 		<servlet-name>Faces Servlet</servlet-name>
-	</filter-mapping>
+	</filter-mapping> -->
 	<session-config>
 		<session-timeout>30</session-timeout>
 	</session-config>
 	<welcome-file-list>
-		<welcome-file>iniciar_sesion.jsf</welcome-file>
+		<welcome-file>index.xhtml</welcome-file>
 	</welcome-file-list>
-	<error-page>
+<!-- 	<error-page>
 		<error-code>500</error-code>
 		<location>/paginas/error500.jsf</location>
-	</error-page>
+	</error-page> -->
 	<context-param>
 		<param-name>primefaces.FONT_AWESOME</param-name>
 		<param-value>true</param-value>
