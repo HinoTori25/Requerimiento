@@ -23,8 +23,8 @@ public class UserController {
 	
     @PostConstruct
     public void init() {
-    	System.out.println("gg");
     	users = userService.listarUsers();
+    	System.out.println(users.get(0).getUser());
     }
     
 	public List<UserModel> getUsers() {

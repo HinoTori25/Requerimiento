@@ -16,7 +16,7 @@
 	<!-- Paquete Base para escanear anotaciones Spring -->
 	<context:component-scan
 		base-package="com.unmsm.software" />
-	<tx:annotation-driven transaction-manager="transactionManager" />
+	<tx:annotation-driven />
 
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
