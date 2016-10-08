@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <title>Base de datos</title>
+        <h:outputScript library="js" name="spanishLocale.js"/>
+    </h:head>
+
+    <h:body>
+        <p:growl id="growl" showDetail="true"  />
+        <div id="top">
+            <div><img style="width:1100px; height: 200px" src="http://www.programacionwebs.com/wp-content/uploads/2012/10/DATOS-en-programacion-715x536.jpg"/></div>
+            <ui:insert name="top">
+                <h:form>
+                    <p:menubar>
+                        <p:menuitem value="Usuarios" url="configuracion/usuarios.xhtml"/>
+                        <p:menuitem value="Catálogo de servicios" url="#"/>
+                        <p:menuitem value="Servicios" url="#"/>
+                        <p:menuitem value="SLA" url="#"/>
+                    </p:menubar>
+                </h:form>
+            </ui:insert>
+        </div>
+
+        <div id="content" class="center_content">
+            <ui:insert name="content"></ui:insert>
+        </div>
+
+        <div id="bottom">
+            <ui:insert name="bottom">Hola</ui:insert>
+        </div>
+
+    </h:body>
+    
+    
+</html>
